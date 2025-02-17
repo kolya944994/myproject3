@@ -1,16 +1,15 @@
 .body {
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
-
+	font-size: 16px;
 	box-sizing: border-box;
+	background-color: #f8f8f8;
 }
 
 .title {
-	border: 1px solid black;
 	background: linear-gradient(to right, #f8f8f8, #ffffff);
 }
 .title__text {
-	border: 1px solid black;
 	color: #7e7e82;
 	padding: 15px;
 	font-family: TT Lakes;
@@ -23,28 +22,27 @@
 }
 .brand {
 	display: flex;
+
 	gap: 15px;
 	margin: 0px;
 	list-style-type: none;
 	padding: 0px;
-	border: 1px solid black;
-	width: 100%;
 }
 .brand__list {
 	margin: 15px;
 	margin-right: 0px;
 	display: flex;
 	justify-content: space-between;
-	gap: 40px;
+	gap: 55px;
 	border: 1px solid #eaeaea;
 	padding: 15px;
 	background-color: #ffffff;
 	border-radius: 7px;
-	width: 100%;
+	height: 100%;
+	width: auto;
 }
 
 .brand__img {
-	border: 1px solid black;
 }
 .brand__button {
 	width: 40px;
@@ -56,5 +54,57 @@
 	border: 2px solid #ff3e79;
 	background-image: url(/img/arrow.svg);
 	background-repeat: no-repeat;
-	width: 100%;
+	cursor: pointer;
+}
+.additional-menu {
+	display: none;
+}
+
+.swiper-pagination {
+}
+@media (min-width: 760px) {
+	.brand {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		column-gap: 0px;
+	}
+
+	.brand__list {
+		width: auto;
+		height: auto;
+		margin: 10px 20px;
+	}
+	.brand__list_display {
+		display: none;
+	}
+	.additional-menu {
+		display: block;
+		position: relative;
+		margin-top: 30px;
+	}
+	.additional-menu__button {
+		margin-left: 35px;
+		background-color: #f8f8f8;
+		border: none;
+		cursor: pointer;
+	}
+	.additional-menu__button::before {
+		content: url(/img/buttonArrowClose.svg);
+		position: absolute;
+		left: 0;
+		top: -2px;
+		margin-left: 15px;
+	}
+}
+
+@media (min-width: 1120px) {
+	.body {
+		max-width: 1120px;
+	}
+	.brand {
+		grid-template-columns: repeat(4, auto);
+	}
+	.brand__list_display {
+		display: flex;
+	}
 }
