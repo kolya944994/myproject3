@@ -39,7 +39,6 @@
 	background-color: #ffffff;
 	border-radius: 7px;
 	height: 100%;
-	width: auto;
 }
 
 .brand__img {
@@ -56,12 +55,31 @@
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
+.swiper {
+	display: flex;
+	border: 1px solid black;
+}
+.swiper-pagination {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+	margin: 15px;
+	margin-right: 0px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	gap: 55px;
+	border: 1px solid #eaeaea;
+	padding: 15px;
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+
 .additional-menu {
 	display: none;
 }
 
-.swiper-pagination {
-}
 @media (min-width: 760px) {
 	.brand {
 		display: grid;
