@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -13,7 +14,7 @@
 	</head>
 	<body class="body">
 		<header class="title">
-			<h3 class="title__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h3>
+			<span class="title__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
 		</header>
 		<section class="menu-brand">
 			<ul class="brand">
@@ -96,9 +97,23 @@
 						<button class="brand__button br" type="button"></button>
 					</div>
 				</div>
-				<div class="swiper-pagination">1111111</div>
+				<div class="swiper-pagination"></div>
 			</div>
 			<script>
+				var button = document.querySelector('.additional-menu__button')
+				var brand = document.querySelector('.brand')
+
+				button.addEventListener('click', function () {
+					if (brand.style.display === 'grid')
+						(brand.style.display = 'none'),
+							(button.textContent = 'Показать все'),
+							button.classList.toggle('additional-menu__button_click')
+					else
+						(brand.style.display = 'grid'),
+							(button.textContent = 'Скрыть'),
+							button.classList.remove('additional-menu__button_click')
+				})
+
 				const swiper = new Swiper('.swiper', {
 					// Optional parameters
 					direction: 'horizontal',
