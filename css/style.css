@@ -2,7 +2,7 @@
 	font-family: 'TT Lakes';
 	font-weight: normal;
 	font-style: normal;
-	src: url(/font/TTLakesCompressed-Regular.woff) format(woff);
+	src: url(../font/TTLakesCompressed-Regular.woff) format(woff);
 }
 .body {
 	margin: 0px auto;
@@ -55,7 +55,7 @@
 	border-radius: 50px;
 	background-position: 50% 50%;
 	border: 2px solid #ff3e79;
-	background-image: url(/img/arrow.svg);
+	background-image: url(../img/arrow.svg);
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
@@ -112,14 +112,14 @@
 		cursor: pointer;
 	}
 	.additional-menu__button::before {
-		content: url(/img/buttonArrowClose.svg);
+		content: url(../img/buttonArrowClose.svg);
 		position: absolute;
 		left: 0;
 		top: -2px;
 		margin-left: 15px;
 	}
 	.additional-menu__button_click::before {
-		content: url(/img/buttonArrowClose.svg);
+		content: url(../img/buttonArrowClose.svg);
 		position: absolute;
 		left: 0;
 		top: -5px;
