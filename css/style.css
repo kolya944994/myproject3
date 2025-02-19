@@ -45,6 +45,7 @@
 	background-color: #ffffff;
 	border-radius: 7px;
 	height: 100%;
+	align-items: center;
 }
 
 .brand__button {
@@ -60,9 +61,13 @@
 	cursor: pointer;
 }
 .swiper {
-	border: 1px solid black;
 }
 .swiper-pagination {
+}
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background-color: #b5b6bc;
 }
 .swiper-wrapper {
 }
@@ -72,12 +77,13 @@
 	margin-bottom: 30px;
 	display: flex;
 	justify-content: space-between;
-	flex-shrink: 1;
 	gap: 55px;
 	border: 1px solid #eaeaea;
 	padding: 15px;
 	background-color: #ffffff;
 	border-radius: 7px;
+	align-items: center;
+	height: auto;
 }
 
 .additional-menu {
@@ -93,7 +99,7 @@
 
 	.brand__list {
 		width: auto;
-		height: max-content;
+		height: auto;
 		margin: 10px 15px;
 	}
 
