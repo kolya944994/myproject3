@@ -3,18 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+
 		<title>Document3</title>
 	</head>
 	<body class="body">
 		<header class="title">
-			<span class="title__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
+			<p class="title__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
 		</header>
 		<section class="menu-brand">
 			<ul class="brand">
@@ -99,37 +98,8 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
-			<script>
-				var button = document.querySelector('.additional-menu__button')
-				var brand = document.querySelector('.brand')
-
-				button.addEventListener('click', function () {
-					if (brand.style.display === 'grid')
-						(brand.style.display = 'none'),
-							(button.textContent = 'Показать все'),
-							button.classList.toggle('additional-menu__button_click')
-					else
-						(brand.style.display = 'grid'),
-							(button.textContent = 'Скрыть'),
-							button.classList.remove('additional-menu__button_click')
-				})
-
-				const swiper = new Swiper('.swiper', {
-					// Optional parameters
-					direction: 'horizontal',
-					loop: true,
-
-					// If we need pagination
-					pagination: {
-						el: '.swiper-pagination',
-					},
-
-					// And if we need scrollbar
-					scrollbar: {
-						el: '.swiper-scrollbar',
-					},
-				})
-			</script>
 		</section>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
