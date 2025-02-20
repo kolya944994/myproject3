@@ -60,26 +60,20 @@
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
-.swiper {
-}
-.swiper-pagination {
-}
+
 .swiper-pagination-bullet {
 	width: 12px;
 	height: 12px;
 	background-color: #b5b6bc;
 }
-.swiper-wrapper {
-}
+
 .swiper-slide {
-	margin: 15px;
-	margin-right: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
 	gap: 55px;
 	border: 1px solid #eaeaea;
-	padding: 15px;
+	padding: 15px 0px;
 	background-color: #ffffff;
 	border-radius: 7px;
 	align-items: center;
@@ -106,6 +100,9 @@
 	.brand__list_display {
 		display: none;
 	}
+	.brand__list_display-js {
+		display: none;
+	}
 	.additional-menu {
 		display: block;
 		position: relative;
@@ -118,14 +115,13 @@
 		cursor: pointer;
 	}
 	.additional-menu__button::before {
-		content: url(../img/buttonArrowClose.svg);
+		content: url(../img/buttonArrow.svg);
 		position: absolute;
 		left: 0;
 		top: -2px;
 		margin-left: 15px;
 	}
 	.additional-menu__button_click::before {
-		content: url(../img/buttonArrowClose.svg);
 		position: absolute;
 		left: 0;
 		top: -5px;
