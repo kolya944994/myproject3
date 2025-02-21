@@ -84,7 +84,7 @@
 	display: none;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
 	.brand {
 		display: grid;
 		grid-template-columns: repeat(3, auto);
@@ -115,7 +115,7 @@
 		cursor: pointer;
 	}
 	.additional-menu__button::before {
-		content: url(../img/buttonArrow.svg);
+		content: url(/img/buttonArrow.svg);
 		position: absolute;
 		left: 0;
 		top: -2px;
