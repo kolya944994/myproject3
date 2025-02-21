@@ -1,12 +1,11 @@
-var button = document.querySelector('.additional-menu__button')
-var brand = document.querySelectorAll('.brand__list_display-js')
+const button = document.querySelector('.additional-menu__button')
+const brand = document.querySelectorAll('.brand__list_display-js')
 
-var addClicker = function (brands) {
+const addClicker = function (brands) {
 	button.addEventListener('click', function () {
-		if (brands.style.display == 'none') {
-			;(brands.style.display = 'flex'),
-				(button.textContent = 'Скрыть'),
-				button.classList.toggle('additional-menu__button_click')
+		button.classList.toggle('additional-menu__button_click')
+		if (brands.style.display === 'none') {
+			;(brands.style.display = 'flex'), (button.textContent = 'Скрыть')
 		} else {
 			;(brands.style.display = 'none'),
 				(button.textContent = 'Показать все'),
@@ -14,6 +13,7 @@ var addClicker = function (brands) {
 		}
 	})
 }
+
 for (var i = 0; i < brand.length; i++) {
 	addClicker(brand[i])
 }
