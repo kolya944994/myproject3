@@ -34,6 +34,7 @@
 	list-style-type: none;
 	padding: 0px;
 }
+
 .brand__list {
 	margin: 15px;
 	margin-right: 0px;
@@ -90,19 +91,18 @@
 		grid-template-columns: repeat(3, auto);
 		column-gap: 0px;
 	}
-
+	.brand__list_display-tablet {
+		display: none;
+	}
+	.brand__list_display-tabletjs {
+		display: flex;
+	}
 	.brand__list {
 		width: auto;
 		height: auto;
 		margin: 10px 15px;
 	}
 
-	.brand__list_display {
-		display: none;
-	}
-	.brand__list_display-js {
-		display: none;
-	}
 	.additional-menu {
 		display: block;
 		position: relative;
@@ -140,7 +140,13 @@
 	.brand {
 		grid-template-columns: repeat(4, auto);
 	}
-	.brand__list_display {
+	.brand__list_display-tablet {
+		display: flex;
+	}
+	.brand__list_display-dekstop {
+		display: none;
+	}
+	.brand__list_display-dekstopjs {
 		display: flex;
 	}
 }
