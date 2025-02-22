@@ -1,15 +1,13 @@
 const button = document.querySelector('.additional-menu__button')
-const brand = document.querySelectorAll('.brand__list_display-js')
+const brand = document.querySelectorAll('.brand__list')
 
 const addClicker = function (brands) {
 	button.addEventListener('click', function () {
 		button.classList.toggle('additional-menu__button_click')
 		if (brands.style.display === 'none') {
-			;(brands.style.display = 'flex'), (button.textContent = 'Скрыть')
+			;(brands.style.display = 'flex'), (button.textContent = 'Показать все')
 		} else {
-			;(brands.style.display = 'none'),
-				(button.textContent = 'Показать все'),
-				button.classList.remove('additional-menu__button_click')
+			;(brands.style.display = 'none'), (button.textContent = 'Скрыть')
 		}
 	})
 }
