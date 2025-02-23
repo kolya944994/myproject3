@@ -3,8 +3,8 @@ const brand = document.querySelectorAll('.brand__list')
 brand.forEach(brand => {
 	button.addEventListener('click', function () {
 		button.classList.toggle('additional-menu__button_click')
-		brand.classList.toggle('brand__list_display-tabletjs'),
-			brand.classList.toggle('brand__list_display-dekstopjs')
+		brand.classList.toggle('brand__list_display-tabletjs')
+		brand.classList.toggle('brand__list_display-dekstopjs')
 		if (button.textContent === 'Скрыть') {
 			button.textContent = 'Показать все'
 		} else {
@@ -12,13 +12,6 @@ brand.forEach(brand => {
 		}
 	})
 })
-
-/*if () {
-		button.textContent = 'Показать все'
-	} else {
-		button.textContent = 'Скрыть'
-	}
-})*/
 
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
