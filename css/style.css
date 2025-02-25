@@ -82,19 +82,18 @@
 	.swiper-wrapper {
 		display: grid;
 		grid-template-columns: repeat(3, auto);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-rows: 0;
 		column-gap: 0px;
+	}
+	.swiper-wrapperjs {
+		grid-auto-rows: auto;
 	}
 	.swiper-slide {
 		width: auto;
 		height: auto;
 		margin: 10px 15px;
 		padding: 15px;
-	}
-	.swiper-slide_display-table {
-		display: none;
-	}
-	.swiper-slide_display-tablejs {
-		display: flex;
 	}
 
 	.additional-menu {
@@ -130,14 +129,5 @@
 	}
 	.swiper-wrapper {
 		grid-template-columns: repeat(4, auto);
-	}
-	.swiper-slide_display-table {
-		display: flex;
-	}
-	.swiper-slide_display-dekstop {
-		display: none;
-	}
-	.swiper-slide_display-dekstopjs {
-		display: flex;
 	}
 }
