@@ -1,7 +1,8 @@
 const button = document.querySelector('.additional-menu__button')
 const brand = document.querySelectorAll('.brand__list')
-brand.forEach(brand => {
-	button.addEventListener('click', function () {
+
+button.addEventListener('click', function () {
+	brand.forEach(brand => {
 		button.classList.toggle('additional-menu__button_click')
 		brand.classList.toggle('brand__list_display-tabletjs')
 		brand.classList.toggle('brand__list_display-dekstopjs')
@@ -10,18 +11,22 @@ brand.forEach(brand => {
 		} else {
 			button.textContent = 'Скрыть'
 		}
+		console.log(brand)
 	})
 })
 
-const swiper = new Swiper('.swiper', {
-	// Optional parameters
-	direction: 'horizontal',
-	slidesPerView: 1.2,
-	spaceBetween: 16,
-	loop: true,
+const screenWidth = window.innerWidth
+if (screenWidth <= 767) {
+	const swiper = new Swiper('.swiper', {
+		// Optional parameters
 
-	// If we need pagination
-	pagination: {
-		el: '.swiper-pagination',
-	},
-})
+		slidesPerView: 1.3,
+		spaceBetween: 16,
+		loop: true,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	})
+}
