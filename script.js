@@ -1,17 +1,17 @@
 const button = document.querySelector('.additional-menu__button')
-const brand = document.querySelectorAll('.brand__list')
+const brand = document.querySelectorAll('.swiper-slide')
 
 button.addEventListener('click', function () {
 	brand.forEach(brand => {
 		button.classList.toggle('additional-menu__button_click')
-		brand.classList.toggle('brand__list_display-tabletjs')
-		brand.classList.toggle('brand__list_display-dekstopjs')
-		if (button.textContent === 'Скрыть') {
-			button.textContent = 'Показать все'
-		} else {
+		brand.classList.toggle('swiper-slide_display-tablejs')
+		brand.classList.toggle('swiper-slide_display-dekstopjs')
+
+		if (brand.classList.contains('swiper-slide_display-tablejs')) {
 			button.textContent = 'Скрыть'
+		} else {
+			button.textContent = 'Показать Все'
 		}
-		console.log(brand)
 	})
 })
 
