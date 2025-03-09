@@ -11,18 +11,30 @@ button.addEventListener('click', function () {
 	}
 })
 
-const screenWidth = window.innerWidth
-if (screenWidth <= 767) {
-	const swiper = new Swiper('.swiper', {
-		// Optional parameters
+let swiperInstance = null
 
-		slidesPerView: 1.3,
-		spaceBetween: 16,
-		loop: true,
+function manageSwiper() {
+	const screenWidth = window.innerWidth
 
-		// If we need pagination
-		pagination: {
-			el: '.swiper-pagination',
-		},
-	})
+	if (screenWidth <= 767) {
+		if (!swiperInstance) {
+			swiperInstance = new Swiper('.swiper', {
+				slidesPerView: 1.3,
+				spaceBetween: 16,
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			})
+		}
+	} else {
+		if (swiperInstance) {
+			swiperInstance.destroy(true, true)
+			swiperInstance = null
+		}
+	}
 }
+
+manageSwiper()
+window.addEventListener('resize', manageSwiper)
